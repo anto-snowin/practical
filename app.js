@@ -15,6 +15,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "view/login.html"));
 });
 
+// Load register page
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "view/register.html"));
+});
+
 // Handle login
 app.post("/login", authController.login);
 
